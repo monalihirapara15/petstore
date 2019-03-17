@@ -17,11 +17,7 @@ class PetController extends Controller
     }
 
     public function showOnePet($id)
-    {
-		$this->validate($request, [
-            'id' => 'required',
-        ]);
-		
+    {	
 		return $petDetail= Pet::with('category')->with('tag')->find($id);
     }
 	

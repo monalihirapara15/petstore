@@ -7,6 +7,7 @@ Follow bellow step
 2] Now, run php -S localhost:8000 -t public to serve the project. Head over to your browser. and run http://localhost:8000/
 
 3] We have five methods here.
+
 	- showAllPets -/GET
 	
 	- ShowOnePet - / POST
@@ -56,5 +57,5 @@ Follow bellow step
 5] For validation
 
 I have just apply validation on pet name. 
-for more validation add naame of the field in create method of PetController
+for more validation add name of the field in create method of PetController
 	
