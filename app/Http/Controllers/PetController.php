@@ -12,23 +12,26 @@ class PetController extends Controller
 
     public function showAllPets()
     {
-
-		
 		$petDetail= Pet::with('category')->with('tag')->get();
 		return response()->json($petDetail);
-		
     }
 
     public function showOnePet($id)
     {
+		$this->validate($request, [
+            'id' => 'required',
+        ]);
+		
 		return $petDetail= Pet::with('category')->with('tag')->find($id);
-        
     }
 	
 
     public function create(Request $request)
     {
-		
+		 $this->validate($request, [
+            'name' => 'required',
+            
+        ]);
 		$category = Category::create([
             'name' => $request['category'],
             
@@ -52,6 +55,10 @@ class PetController extends Controller
 
     public function update($id, Request $request)
     {
+		$this->validate($request, [
+            'id' => 'required',
+            
+        ]);
         $pet = Pet::findOrFail($id);
         $pet->update($request->all());
 

@@ -16,13 +16,10 @@ $router->get('/', function () use ($router) {
 });
 
 $router->group(['prefix' => 'api'], function () use ($router) {
+	
   $router->get('pets',  ['uses' => 'PetController@showAllPets']);
-
   $router->get('pets/{id}', ['uses' => 'PetController@showOnePet']);
- 
   $router->post('pets', ['uses' => 'PetController@create']);
-
   $router->delete('pets/{id}', ['uses' => 'PetController@delete']);
-
   $router->put('pets/{id}', ['uses' => 'PetController@update']);
 });
