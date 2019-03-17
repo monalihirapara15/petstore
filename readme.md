@@ -56,6 +56,6 @@ Follow bellow step
 		
 5] For validation
 
-I have just apply validation on pet name. 
-for more validation add name of the field in create method of PetController
+I have only applied validation on Pet name to create new pet. 
+For more validation add name of the field in create method of PetController.
 	
