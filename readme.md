@@ -8,10 +8,15 @@ Follow bellow step
 
 3] We have five methods here.
 	- showAllPets -/GET
+	
 	- ShowOnePet - / POST
+	
 	- create - /POST
+	
 	- update - /PUT
+	
 	- delete - /DELETE
+	
 	
 	For example, if you make a POST request to /api/pets API endpoint, the create function will be invoked.
 	
